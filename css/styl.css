@@ -1,0 +1,129 @@
+/* Local Font */
+@font-face {
+  font-family: cursive-font;
+  src: url("../assests/fonts/calling-angels-personal-use.regular.ttf");
+}
+/* variable */
+:root {
+  --background-color: #f7e6c4;
+  --white: #ffffff;
+  --balck: #444;
+  --message-box: #606c5d;
+  --border-color: crimson;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  color: var(--balck);
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 8px;
+  font-family: cursive-font;
+}
+h1 > span {
+  color: black;
+  font-size: 120px;
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.center-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.imgBox {
+  background-image: url("../assests/image/codexr-logo-2.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.whiteBox {
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn {
+  background-color: var(--balck);
+  color: var(--white);
+  border-radius: 15px;
+  padding-inline: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+.btn:hover {
+  background-color: var(--white);
+  color: var(--balck);
+  border: none;
+  transition: 1s;
+}
+/* Utility Style */
+.hold {
+  border: 4px solid var(--border-color);
+}
+.hide {
+  display: none;
+}
+.dashed {
+  background: var(--balck);
+}
+
+#message {
+  background-color: var(--message-box);
+  color: var(--white);
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h1 span {
+    font-size: 50px;
+  }
+  .center-box {
+    width: 521px;
+    height: 80%;
+  }
+  .imgBox {
+    width: 100%;
+  }
+  .whiteBox {
+    width: 80%;
+  }
+}
